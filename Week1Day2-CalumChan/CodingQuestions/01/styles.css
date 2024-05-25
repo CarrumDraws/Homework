@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+section > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table,
+th,
+td {
+  border: 1px solid black; /* Adds a 1px solid black border to each cell */
+  text-align: left;
+}
+
+th,
+td {
+  width: calc(100% / 6);
+}

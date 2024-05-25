@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+section > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+td {
+  text-align: left;
+  padding: 0 10px;
+}
+
+span.material-icons {
+  vertical-align: text-bottom;
+}

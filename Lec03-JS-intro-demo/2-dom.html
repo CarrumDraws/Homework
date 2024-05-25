@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        background-color: lightgrey;
+      }
+
+      .flex-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Selecting DOM element nodes via querySelector, giving us NodeLists -->
+
+    <!-- <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>Node</li>
+      <li>React</li>
+    </ul> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Selecting DOM element via getElementBy, giving us HTML collections -->
+
+    <!-- <p id="first">Make this 30px</p>
+  submit -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Adding & removing event listeners to & from an element -->
+
+    <!-- <button id="myBtn">get date info</button>
+    <p id="date"></p> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Accessing the properties of the element that triggered an event with e.target -->
+
+    <!-- <p>Make this background red when I click and white when I release!</p> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Accessing DOM element attributes -->
+
+    <!-- <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>Node</li>
+      <li>React</li>
+    </ul> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Event Propagation: root -> capturing -> target element -> bubbling -> root -->
+
+    <!-- <div id="div1" style="background-color: red; width: 500px">
+      div1
+      <div id="div2" style="background-color: green; width: 400px">
+        div2
+        <div id="div3" style="background-color: grey; width: 300px">div3</div>
+      </div>
+    </div> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Event Delegation: Adding event listeners to a parent element to handle similar logic in all children elements, which is triggered by bubbling. -->
+
+    <!-- <div id="container" class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+    <div class="flex-item">9</div>
+    <div class="flex-item">10</div>
+    <div class="flex-item">11</div>
+    <div class="flex-item">12</div>
+    <div class="flex-item">13</div>
+    <div class="flex-item">14</div>
+    <div class="flex-item">15</div>
+    <div class="flex-item">16</div>
+    <div class="flex-item">17</div>
+    <div class="flex-item">18</div>
+    <div class="flex-item">19</div>
+    <div class="flex-item">20</div>
+    <div class="flex-item">21</div>
+    <div class="flex-item">22</div>
+    <div class="flex-item">23</div>
+    <div class="flex-item">24</div>
+    <div class="flex-item">25</div>
+    <div class="flex-item">26</div>
+    <div class="flex-item">27</div>
+    <div class="flex-item">28</div>
+    <div class="flex-item">29</div>
+    <div class="flex-item">30</div>
+    <div class="flex-item">31</div>
+    <div class="flex-item">32</div>
+    <div class="flex-item">33</div>
+    <div class="flex-item">34</div>
+    <div class="flex-item">35</div>
+    <div class="flex-item">36</div>
+    <div class="flex-item">37</div>
+    <div class="flex-item">38</div>
+    <div class="flex-item">39</div>
+    <div class="flex-item">40</div>
+    <div class="flex-item">41</div>
+    <div class="flex-item">42</div>
+    <div class="flex-item">43</div>
+    <div class="flex-item">44</div>
+    <div class="flex-item">45</div>
+    <div class="flex-item">46</div>
+    <div class="flex-item">47</div>
+    <div class="flex-item">48</div>
+    <div class="flex-item">49</div>
+    <div class="flex-item">50</div>
+    <div class="flex-item">51</div>
+    <div class="flex-item">52</div>
+    <div class="flex-item">53</div>
+    <div class="flex-item">54</div>
+    <div class="flex-item">55</div>
+    <div class="flex-item">56</div>
+    <div class="flex-item">57</div>
+    <div class="flex-item">58</div>
+    <div class="flex-item">59</div>
+    <div class="flex-item">60</div>
+    <div class="flex-item">61</div>
+    <div class="flex-item">62</div>
+    <div class="flex-item">63</div>
+    <div class="flex-item">64</div>
+    <div class="flex-item">65</div>
+    <div class="flex-item">66</div>
+    <div class="flex-item">67</div>
+    <div class="flex-item">68</div>
+    <div class="flex-item">69</div>
+    <div class="flex-item">70</div>
+    <div class="flex-item">71</div>
+    <div class="flex-item">72</div>
+    <div class="flex-item">73</div>
+    <div class="flex-item">74</div>
+    <div class="flex-item">75</div>
+    <div class="flex-item">76</div>
+    <div class="flex-item">77</div>
+    <div class="flex-item">78</div>
+    <div class="flex-item">79</div>
+    <div class="flex-item">80</div>
+    <div class="flex-item">81</div>
+    <div class="flex-item">82</div>
+    <div class="flex-item">83</div>
+    <div class="flex-item">84</div>
+    <div class="flex-item">85</div>
+    <div class="flex-item">86</div>
+    <div class="flex-item">87</div>
+    <div class="flex-item">88</div>
+    <div class="flex-item">89</div>
+    <div class="flex-item">90</div>
+    <div class="flex-item">91</div>
+    <div class="flex-item">92</div>
+    <div class="flex-item">93</div>
+    <div class="flex-item">94</div>
+    <div class="flex-item">95</div>
+    <div class="flex-item">96</div>
+    <div class="flex-item">97</div>
+    <div class="flex-item">98</div>
+    <div class="flex-item">99</div>
+    <div class="flex-item">100</div>
+  </div> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Prevent a form from submitting with e.preventDefault(). -->
+
+    <!-- <form id="signin">
+      <label>name</label>
+      <input type="text" name="username" id="username" /> <br />
+      <label>password</label>
+      <input type="password" name="password" id="password" /> <br />
+      <label>remember me:</label>
+      <input type="checkbox" id="checkbox" /> <br />
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Using JS to dynamically create and remove DOM elements based on input fields. -->
+
+    <ul id="fruit"></ul>
+
+    <form id="addFruit">
+      <label>Fruit Name:</label>
+      <input type="text" id="fruitname" /> <br />
+      <button type="submit">Add</button>
+    </form>
+  </body>
+
+  <script src="2-dom.js"></script>
+</html>

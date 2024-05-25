@@ -1,0 +1,28 @@
+1. What is ECMAScript? : ECMAScript is a standardized scripting language specification. JS, among other languages, fits this standard.
+2. What is the JavaScript engine? : Its a program specific to your browser that executes JS code.
+3. Explain just-in-time (JIT) compilation. What’s the difference between JIT compilation and interpretation? : JIT is a method of compilation that compiles human-readable code to machine-readable code all at once, right before the code is executed. Interpretation, however, compiles line by line.
+4. What is REPL? : Read-Eval-Print-Loop : A console that you can access from Chrome Devtools, whcih allows you to execute code and run simple commands.
+5. What are primitive data types in JS? : Data types that, when passed to a function, are passed by value instead of by reference. Primitive data types are used to build up the reference data types.They are immutable and cant be changed- instead, operations on them produce new values. They are stored on the stack (faster to access) and are directly comparable to one another.
+6. What are reference data types in JS? : Data types that are passed by reference when passed to a function. They are more "complex" than primitive data types. They are mutable (values can be directly changed), stored in heap (larger space but slower access), and are compared by their references.
+7. What is type coercion, and how does it differ from type conversion? : Both change the datatypes of variables, but coerceon does it implicitly (automatically) while type conversion does it manually. "1" == 1 is an example of coercion.
+8. What is dynamic typing? : Types in JS aren't set, so you can have one variable swap between differnt types.
+9. What is immutability? : When an element can't change it's value
+    1. What data types are immutable? : Primitive Data Types
+10. What is the difference between == and ===? : == is "loose equality," meaning it coerces  values to match before checking their equality. === is strict equality- both the values and types must match.
+11. What are some examples of falsy values in JS? : 0, '', "", ``, undefined, null, NaN
+12. Explain short-circuit evaluation. : When working with && or ||, if the first value is enough to determine the final answer, the second value isn't even looked at.
+13. How do primitive and reference data types differ in where they’re stored in memory? : Primitive types are stored in stack, while reference types are stored in heap.
+    1. How does this affect them when they are passed as arguments to a function? : Primitive types are passes by copy when they are used in a function, so changes to them don't affect the origional. however, reference types are passed via a pointer to the memory address in the heap, so changes to that affect the original values.
+14. What are 3 ways to declare functions? What is their syntax? : Function Decleration (function func() { }), Function Expression (const funcName = func() { }), Arrow Function (const funcName = () => { })
+15. How do first-class functions differ from higher-order functions? : FIrst class fucntions are functions that can be treated as a variables, passed/returned from srguments, and stored in structures. A HOF is a function that takes a function as an input
+16. What are pure functions? : function that always produces the same output with the same input and causes no side effects.
+17. What are 3 ways to iterate an array? What is their syntax? : [item1, item2, item3, …], new Array(item1, item2, item3, …), Array.of(item1, item2, item3)
+18. What are the major differences between a set and array? : Sets are like arrays but dont have order and only store unique values.
+19. What are the major differences between a map and object? : A Map is an object that has order of insertion and can have any datatype act as the key, including objects, arrays, or functions.
+20. What is the DOM? : Document object Model : An interface for web documents. It represents the HTML as a tree, with each leaf being a DOM node.
+21. How can you select an HTML element using JS? : document.getElementByID, document.getElementsByClassName, document.getElementsByTagName, etc.
+22. What is a DOM event? : An event that is triggered by an action, like clicking, hovering, or submitting.
+23. What is the Event interface? : The interface to the event itself. Can declate the event type, the event target, or event propogation.
+24. How do we register event handlers for a selected element? : element.addEventListener("type", (event)=>{ });
+25. What is event propagation? How many phases are there? In what order does it occur? : Determines how an event flows throguhout the DOM Tree. Capture, Target, Bubbling.
+26. Explain event delegation. Why is it important? : It's useful for when you have multiple siblings with event handlers that do the same thing. Instead, you could bind one event to the parent.

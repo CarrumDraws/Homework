@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: min(500px, calc(100% - 20px));
+  margin: 10px;
+}
+
+.tab {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background-color: whitesmoke;
+  outline: 1px solid lightgrey;
+}
+
+.tab > * {
+  height: 100%;
+  padding: 0rem 1rem;
+  border-width: 0px;
+}
+
+/* Targets Text Displays */
+body > *:not(.tab) {
+  padding: 1rem;
+  outline: 1px solid lightgrey;
+}
+
+body > *:not(.tab) > p {
+  margin-top: 1rem;
+}

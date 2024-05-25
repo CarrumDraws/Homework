@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+section > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ol > li:nth-of-type(odd):hover {
+  background-color: yellow;
+}
+
+ol > li:nth-of-type(even):hover::first-letter {
+  color: red;
+  font-size: 35px;
+}

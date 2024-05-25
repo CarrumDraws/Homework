@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+section {
+  width: min(600px, 100%);
+  padding-top: 50px;
+  aspect-ratio: 2 / 1.5;
+}
+
+section > * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+section * {
+  color: gray;
+}
+
+header {
+  height: 20%;
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+.body {
+  height: 70%;
+  display: flex;
+}
+
+.body > * {
+  padding: 10px;
+}
+
+nav {
+  flex-grow: 1;
+  background-color: tan;
+}
+
+article {
+  flex-grow: 3;
+}
+
+aside {
+  flex-grow: 1;
+  background-color: tan;
+}
+
+footer {
+  height: 10%;
+  padding: 10px;
+  background-color: yellow;
+}

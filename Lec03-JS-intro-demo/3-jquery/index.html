@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JQuery</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="jquery.js"></script>
+  <style>
+    div {
+      width: 800px;
+    }
+
+    .second {
+      display: none;
+    }
+
+    .input {
+      border: 2px solid grey;
+      border-radius: 4px;
+    }
+
+    .redDiv {
+      background-color: red;
+    }
+
+    .all {
+      font-family: fantasy;
+      font-size: 30px;
+    }
+
+    .footer {
+      font-style: italic;
+    }
+
+    .footer-border {
+      border: 2px dotted grey;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <img src="icon.png" alt="icon" style="width:100px;height:100px;">
+    <h2>JQuery</h2>
+    <ul>
+      <li>Selector, HTML, Event1</li>
+      <li>Event2,Animation</li>
+    </ul>
+    <div id='firstDiv'>
+      <div id='div'>
+        div
+      </div>
+      <div class="redDiv">
+        red div
+      </div>
+      <input type="text" id="search" />
+      <button id="searchBtn"> search </button>
+      <button id="resetBtn"> reset </button>
+      <input type="checkbox" id='checkbox' checked>checkbox</input>
+      <table>
+        <tbody>
+          <tr>
+            <th style="width:20%">Selector</th>
+            <th style="width:25%">Example</th>
+            <th>Selects</th>
+          </tr>
+          <tr class="all">
+            <td><a href="">*</a></td>
+            <td>$("*")</td>
+            <td>All elements</td>
+          </tr>
+          <tr>
+            <td><a href="">#<em>id</em></a></td>
+            <td>$("#lastname")</td>
+            <td>The element with id="lastname"</td>
+          </tr>
+          <tr>
+            <td><a href="">.<em>class</em></a></td>
+            <td>$(".intro")</td>
+            <td>All elements with class="intro"</td>
+          </tr>
+          <tr>
+            <td><a href=""><em>el1</em>,<em>el2</em>,<em>el3</em></a></td>
+            <td>$("h1,div,p")</td>
+            <td>All &lt;h1&gt;, &lt;div&gt; and &lt;p&gt; elements</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><a href="">parent &gt; child</a></td>
+            <td>$("div &gt; p")</td>
+            <td>All &lt;p&gt; elements that are a direct child of a &lt;div&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="">parent descendant</a></td>
+            <td>$("div p")</td>
+            <td>All &lt;p&gt; elements that are descendants of a &lt;div&gt; element</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class='footer'>
+        ----footer----
+      </div>
+    </div>
+
+    <div id='secondDiv' class='second'>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Nodejs</li>
+        <li>React</li>
+      </ol>
+      <input type="text" id="addValue" />
+      <button id='addBtn'>Add</button>
+      <div style="padding: 20px;">
+        <button style="background-color: aqua;">show</button>
+        <button style="background-color: aqua;">hide</button>
+        <button style="background-color:cornsilk">slideDown</button>
+        <button style="background-color:cornsilk">slideUp</button>
+        <button style="background-color:khaki">fadeIn</button>
+        <button style="background-color:khaki">fadeOut</button>
+
+        <button style="background-color:darkseagreen">toggle show</button>
+        <button style="background-color:darkseagreen">toggle slide</button>
+        <button style="background-color:darkseagreen">toggle fade</button>
+
+        <button style="background-color:darksalmon">My Animation</button>
+        <button style="background-color:dodgerblue">Toggle show with Stop</button>
+        <div id="animationDiv" style="width: 100px; height: 100px; background-color: pink;">
+        </div>
+
+      </div>
+
+    </div>
+
+
+</body>
+
+</html>

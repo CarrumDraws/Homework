@@ -1,0 +1,17 @@
+1. What is ‘use strict’? What are the major effects that it has? 
+2. What are the different type of scopes? 
+3. What is hoisting? 
+4. Explain the differences between var, let, & const. 
+5. What is an execution context? How does it relate to the call stack? 
+6. What is the scope chain? How does lexical scoping work? 
+7. What is a closure? Can you provide an example use-case in words? 
+8. What is currying? 
+9. What is an IIFE? When would you use it? 
+10. Can you name the new ES6 features? 
+11. What are generators and generator functions? 
+12. What is Object-Oriented Programming (OOP)? 
+13. What is prototype-based OOP in JS? 
+14. What is the prototype chain? 
+15. How do you implement inheritance in JavaScript before ES6 and with ES6? 
+16. What does ‘this’ refer to in the cases that were discussed in lecture? 
+17. What are the differences between call, apply & bind?

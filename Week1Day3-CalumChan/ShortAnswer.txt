@@ -1,0 +1,41 @@
+1. What is the Box Model? Describe each part. : 
+    Content :  The size of the content within the box. 
+    Padding : The distance between the edge of the content and the inner edge of the border. Setting the padding changes the size of the box unless box-sizing is set to border-box. 
+    The Border : the border of the element. Can be outlined. 
+    Margin : Distance between the edge of the border and the next element. Adjacent margins "margin collapse"- meaning the distance between them is equal to the larger of the two margins, NOT the margins combined.
+2. What is the difference between margin and padding? : 
+    Margin : Distance between the edge of the border and the next element.
+    Padding : The distance between the edge of the content and the inner edge of the border. Setting the padding changes the size of the box unless box-sizing is set to border-box.
+    1. Can padding be negative? Can margin be negative? 
+        Margin can be negative while padding can't be.
+3. Assume an element has the following properties. What is the element size (width & height)? Please explain how you arrived at your solution. width: 100px; height: 100px; margin: 20px 50px; padding: 10px 10px; border: 2px solid black; 
+    The margin isnt included in the size, so the size is 124x124. The size is 164 x 224.
+4. Assume an element has the following properties. What is the element size (width & height)? Please explain how you arrived at your solution. width: 100px; height: 100px; margin: 20px 50px; padding: 10px 10px; border: 2px solid black;  box-sizing: border-box; 
+    border-box means the padding and border are included in the dimentions, meaning the size is 100 x 100.
+5. What is the difference between position:fixed and position:absolute? 
+    Fixed: Positioned relative to the viewport, sticks when scrolled
+    Absolute: Positioned relative to the nearest non-static relative
+6. What does z-index do? 
+    It Alters the layering of non-static positioned elements. The layering can be different than the layering caused by default document flow.
+7. What is Flexbox? 
+    A way to position elements in rows and columns dynamically and responsively. Easy to use and a cornerstone of CSS
+8. What is Grid? 
+    A 2D version of Flexbox. Not as commonly used but still powerful.
+9. What are the major differences between CSS transitions and animations? 
+    CSS Transitions take you between two states, while CSS animations can have multiple states, allowing much more complexity.
+10. What is responsive web design (RWD)? What are some examples of RWD on a website? How do we achieve this? 
+    Responsive web design measn the website restructures to fit your phone screen for a better user experiance. Pretty much every popular website has RWD, as the desktop UI is drastically different from the Mobile UI. We can achieve this with CSS media queries.
+11. What is a CSS preprocessor? What are the advantages and disadvantages, if any, to using them over plain CSS? 
+    A CSS Preprocessor (like SASS) is a language similar to CSS that compiles into CSS. It helps with repetitive CSS tasks amd makign your code more functional and uniform. Some examples of its benefits are CSS Variable support even with IE, mixins, importing of toher SASS files, and CSS Selector Nesting.
+12. What is the usage of ‘&’ in SCSS? 
+    It refers to the parent selector (kind of like the 'this' JS keyword). Useful for attatching Pseudo-classes and pseudo-elements.
+13. What is @mixin? What are some use cases? 
+    A @mixin lets you define a set of reusable CSS properties, keeping your CSS DRY.
+14. What is @extend? What are some use cases? 
+    @extend is similar to Mixins. They allow a CSS styling to extend a SASS Placeholder(%), which are reusable CSS properties.
+15. What is the usage of !important? What are some use cases? 
+    !important ignores CSS rule cascading, and forces that rule to be applied over all others. It should be avoided if possible.
+16. Could you explain accessibility, usability, and inclusion? Give some examples of each one in terms of web design.
+    Accessibility : Helps those with disabilities use the app. Examples : Designing app with font-magnification in mind
+    Usability : Designing with user Experiance Design in mind. Examples : User Feedback, breadcrumbs for navigation, using icons that the user is already familiar with
+    Inclusion : Designing with other cultures, locations, etc in mind. Example: Adding a language toggle.
