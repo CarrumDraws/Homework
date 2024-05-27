@@ -18,7 +18,7 @@ function Car(engine = "Diesel", speed = 25, wheels = 4, brake = false) {
 
 // Set up Inheritance (Car < Vehicle) ------
 Car.prototype = Object.create(Vehicle.prototype); // Set Car prototype = Vehicle prototype
-// Car.prototype's constructor is now set to Vehicle.
+// Car.prototype's constructor is now wrongly set to Vehicle.
 Car.prototype.constructor = Car; // Fix it.
 
 Car.prototype.honk = function () {

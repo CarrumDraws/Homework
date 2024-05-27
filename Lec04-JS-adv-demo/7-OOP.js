@@ -157,37 +157,41 @@
 // -------------------------------------------
 // console.log("-------------------------------------------");
 
-const PersonES5 = function (firstname, address) {
-  this.firstname = firstname;
-  this.address = address;
-};
-PersonES5.prototype.say = function () {
-  console.log(`My name is ${this.firstname}, I live in ${this.address}`);
-};
+// const PersonES5 = function (firstname, address) {
+//   this.firstname = firstname;
+//   this.address = address;
+//   console.log(this); // PersonES5
+// };
+// PersonES5.prototype.say = function () {
+//   console.log(`My name is ${this.firstname}, I live in ${this.address}`);
+// };
 
-const StudentES5 = function (firstname, address, year) {
-  // execute the parent constructor, where 'this' refers to the student
-  // student will be initialized with parent properties
-  PersonES5.call(this, firstname, address);
-  this.year = year;
-};
+// let newPerson = new PersonES5();
 
-console.log("StudentES5.prototype =", StudentES5.prototype);
+// console.log(PersonES5.say());
+// const StudentES5 = function (firstname, address, year) {
+//   // execute the parent constructor, where 'this' refers to the student
+//   // student will be initialized with parent properties
+//   PersonES5.call(this, firstname, address);
+//   this.year = year;
+// };
 
-StudentES5.prototype = Object.create(PersonES5.prototype);
-console.log(
-  "Assigned Person prototype, StudentES5.prototype =",
-  StudentES5.prototype
-);
+// console.log("StudentES5.prototype =", StudentES5.prototype);
 
-const studentES5 = new StudentES5("Ethan", "NJ", "4");
-studentES5.say();
+// StudentES5.prototype = Object.create(PersonES5.prototype);
+// console.log(
+//   "Assigned Person prototype, StudentES5.prototype =",
+//   StudentES5.prototype
+// );
+
+// const studentES5 = new StudentES5("Ethan", "NJ", "4");
+// studentES5.say();
 
 // Update the copy of the parent prototype, so that the constructor initializes all the correct student properties
-StudentES5.prototype.constructor = StudentES5;
-console.log(
-  "Assigned Student constructor, StudentES5.prototype =",
-  StudentES5.prototype
-);
+// StudentES5.prototype.constructor = StudentES5;
+// console.log(
+//   "Assigned Student constructor, StudentES5.prototype =",
+//   StudentES5.prototype
+// );
 
 // // Student wants customized behavior for say method => update the method on the prototype

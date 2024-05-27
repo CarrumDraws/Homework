@@ -1,17 +1,33 @@
-1. What is ‘use strict’? What are the major effects that it has? 
-2. What are the different type of scopes? 
-3. What is hoisting? 
-4. Explain the differences between var, let, & const. 
-5. What is an execution context? How does it relate to the call stack? 
-6. What is the scope chain? How does lexical scoping work? 
-7. What is a closure? Can you provide an example use-case in words? 
-8. What is currying? 
-9. What is an IIFE? When would you use it? 
-10. Can you name the new ES6 features? 
-11. What are generators and generator functions? 
-12. What is Object-Oriented Programming (OOP)? 
-13. What is prototype-based OOP in JS? 
-14. What is the prototype chain? 
-15. How do you implement inheritance in JavaScript before ES6 and with ES6? 
-16. What does ‘this’ refer to in the cases that were discussed in lecture? 
+1. What is ‘use strict’? What are the major effects that it has? : a directive that enforces writing secure code. Prohibits syntax likely to be used in a future JS version, changes some silent errors to throw errors.
+2. What are the different type of scopes? : 
+    Global : Accessible anywhere
+    Functional : Accessible only within a function body
+    Block : Accessible only within a non-functional body (if, else, while, for loops)
+    Lexical : Accessible within its lexical context (Location within the source code)
+3. What is hoisting? : Prior to code execution, the code is scanned and all function/variable declarations are moved to the top, allowing them to seemingly be accessed before they are declared. Note that vars, before they're officially declared, will be undefined.
+4. Explain the differences between var, let, & const. : When hoisted before being initialized, var is undefined while let and const throw a reference error. Let and Const were added in ES6, you can't change const's value, but you can alter its properties if const's value is mutable. Var's can also be redeclared.
+5. What is an execution context? How does it relate to the call stack? : Execution Contexts are the environment that a function is executed in that stores the Lexical Environment (Arguments, local variables, etc), Scope Chain (Chain of Lexical Environments), and this binding of a context. The Call stack is a stack (LIFO) that stores execution contexts. This way, multiple nested functions retain access to their respoective environments.
+6. What is the scope chain? How does lexical scoping work? : The scope chain is a structure that determines where a functions looks towards inorder to define a variable. It looks in the current scope, and branches out until it reaches the global scope. The scope chain is determined by a function's position in the sourcecode. It can't access values that are outside of its parent scopes- this is lexical scoping.
+7. What is a closure? Can you provide an example use-case in words? : A closure is a function A that contains some local variables that returns a function B, which then uses the variables from function A. It is a way for a child function to still access its parent's local variables even after it's parent has been executed. An example use-case would be if you wanted to simulate private variables in JS, since you can't directly access function A's local variables.
+8. What is currying? : Breaking down a function that takes multiple arguments into multiple small functions, connected by closures, that take a single argument each.
+9. What is an IIFE? When would you use it? : Immediately Invoked Functional Expression. It immediately calls a fucntion then discards the function. It also has its own personal scope.
+10. Can you name the new ES6 features? : Let, Const, Classes, Promises, Async, Await, Arrow Functions, Template String Literals, Spread and rest operators
+11. What are generators and generator functions? : Generators are a niche objects that can be manually paused and resumed during its runtime.
+12. What is Object-Oriented Programming (OOP)? : A Programming Paradeigm (As opposed to Functional Programming) that focuses on Classes and Objects. The main principles of OOP are Encapsulation, Inheritance, Polymorphism, and Abstraction. JS can do all of these.
+13. What is prototype-based OOP in JS? : In JS, we don't have traditional Classes and Modules, so it doens't have traditional inheritance- instead we use prototypes to mimic inheritance via "prototypal inheritance". This is the foundation of Prototype-based OOP.
+14. What is the prototype chain? : The prototype chain is a chain of prototypes leading from Object to the prototype of your current object. When searching for a prototype's properties/methods, your query traverses up the tree until it is satisfied.
+15. How do you implement inheritance in JavaScript before ES6 and with ES6? : before ES6, you have to use prototypes and constructor functions to achieve prototypal inheritance. Now, you can use classes with the 'extends' keyword, but under the hood it still uses prototypal inheritance.
+16. What does ‘this’ refer to in the cases that were discussed in lecture? : 'this' refers to the current execution context. It depends on where/how it was called. In a Node.js environment, this can refer to either the function itself, the module.exports object, or global, which is Node.JS's global object. In a Browser environemnt however, references to the module.exports object or global are both replaced by the window object, which is the browser's global object. In lecture, it was assumed that you were running your code in a browser environemnt, as module.exports wasn't discussed. It was also assumed that you accessed methods and functions directly instead of by reference, so calling "obj.func()" instead of setting that equal to a variable and executing the variable.
+    "this" at the Top Level = Global Object (Window)
+    Object Method w/ Keyword Function : Parent Object
+    Object Method w/ Arrow Function : Global Object
+    Keyword Function inside Keyword Function : Global Object 
+    Arrow Function inside Keyword Function: Matches the scope of the parent Keyword Function
+    Keyword Function inside Arrow Function : Global Object 
+    Arrow Function inside Arrow Function : Matches the scope of the parent Arrow Function (Likely Global Object)
+    Keyword Function inside Event Handler : Refers to the targeted element (Like a button)
+    Arrow Function inside Event Handler : Global Object (Not reccomended to use)
 17. What are the differences between call, apply & bind?
+    func.call(obj, args) : Triggers function func() using obj as its scope, wiht arguments args.
+    func.call(obj, [args]) : Triggers function func() using obj as its scope, with arguments [args].
+    func.bind(obj) : Returns a copy of func() with obj as its scope. Func not triggered.
