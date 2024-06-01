@@ -1,0 +1,23 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "intro": "node --watch 1-intro",
+    "static": "node --watch 2-static",
+    "pug": "node --watch 3-pug",
+    "router": "node --watch 4-router",
+    "logging": "node --watch 5-logging"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}

@@ -1,0 +1,17 @@
+//- Structure: Designed to be more concise and readable compared to standard HTML
+//- head : Contains Metadata
+//- styles.css : Should be located in the same directory as this .pug file
+//- script.js : Found in "public" directory
+
+//- Takes in 'number' and 'title' params
+html
+  head 
+    title= title
+    style
+        include styles.css
+  body
+    div(id='container')
+      h1(id='number')= number
+      button(id='increment') Increment 
+      button(id='decrement') Decrement 
+    script(src='script.js') 
