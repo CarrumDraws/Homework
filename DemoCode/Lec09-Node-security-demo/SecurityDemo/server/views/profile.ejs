@@ -1,0 +1,12 @@
+<%# Path is relative to this template. Specify variables to pass into the
+partial %> <%- include("partials/header.ejs", {title:"Profile", loggedIn:true});
+%> <%# Stylesheets only used by this template %>
+<link rel="stylesheet" href="/public/styles/profile.css" />
+
+<main>
+  <div class="profile">Profile things for user <%= uid %></div>
+
+  <%- include("partials/sidebar.ejs"); %>
+</main>
+
+<%- include("partials/footer.ejs"); %>

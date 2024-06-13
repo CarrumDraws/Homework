@@ -1,0 +1,1 @@
+I/O Operations : Any operation that involves reading from/writing to an external source. Could be fs, making/handling HTTP requests, interacting with Databases, or handling TCP/UDP sockets.

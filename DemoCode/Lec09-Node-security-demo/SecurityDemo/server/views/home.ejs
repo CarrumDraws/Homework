@@ -1,0 +1,17 @@
+<%# Path is relative to this template. Specify variables to pass into the
+partial %>
+<!-- Partial: Template Engines' version of Modules  -->
+<!-- ejs: Embedded Javascript :  -->
+<%- include("partials/header.ejs", {title:"Home", loggedIn:loggedIn}); %> <%#
+Stylesheets only used by this template %>
+<link rel="stylesheet" href="/public/styles/home.css" />
+
+<main>
+  <div>
+    <h1>Welcome to the Reddit homepage.</h1>
+  </div>
+
+  <%- include("partials/sidebar.ejs"); %>
+</main>
+
+<%- include("partials/footer.ejs"); %>

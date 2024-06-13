@@ -1,0 +1,35 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  font-size: 3rem;
+}
+
+.calculator > * {
+  height: 100px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightblue;
+}
+
+.row > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}

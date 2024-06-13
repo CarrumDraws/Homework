@@ -1,0 +1,22 @@
+1. What are useState?
+    useState is the most popular hook in React. With it, you can maintain state in a React application, and rerender the page anytime the state changes. Updates to the state can be tracked with useEffect.
+2. Talk about lifecycle hooks in React
+    The 4 most popular lifecycle methods in classes can be mimiced using React Hooks like useState and useEffect.
+    render : Same as useState(()=>{})
+    componentDidMount : Same as useState(()=>{}, [])
+    componentDidUpdate : Same as useState(()=>{}, [state])
+    componentWillUnmount : Same as useState(()=>{ return () => {}})
+3. How to pass the data from parent to child
+    Send the data down the child as a prop
+4. How to pass the data from child to parent
+    Send a callback function that sets the parent's state down to the child. The child can call the function, passing in it's own values.
+5. What are the different ways passing the data from parent to it’s descendant
+    Props: Most basic way, pass in either a value or a callback function 
+    Context API : A way to pass props down to deeply nested children without having to deal with prop drilling
+    Redux : Popular Third-Party library that is an advanced version of Context API
+6. What is React context?
+    A way to pass props down to deeply nested children without having to deal with prop drilling
+7. What is the difference between useCallback with useMemo
+    They are both used to optimize performance by memoizing things to prevent rerenders. usecallback memoizes callback functions while useMemo memoizes the result of a function.
+8. What is the usage of React.memo()
+    It is a Higher Order Component that can make a functional component pure, enabling a shallow props/state comparison to prevent unnecessary rerenders.

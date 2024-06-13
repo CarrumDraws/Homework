@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Introduction to HTML & CSS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>HTML Intro</title>
+  </head>
+
+  <body>
+    <!-- Text Formatting -->
+    <!-- &lti&gt: <i>italics</i> <br />
+    &ltem&gt: <em>emphasis</em> <br />
+    &ltcite&gt: <cite>title of a work</cite> <br />
+    &ltdfn&gt: <dfn>definition of a term</dfn> <br />
+
+    <br />
+    &ltb&gt: <b>bold</b> <br />
+    &ltstrong&gt: <strong>important text</strong> <br />
+
+    <br />
+    &ltmark&gt: <mark>marked or highlighted text</mark> <br />
+
+    <br />
+    &ltu&gt: <u>underline</u> <br />
+    &ltins&gt: <ins>text that was inserted into a document</ins> <br />
+
+    <br />
+    &lts&gt: <s>text that is no longer correct</s> <br />
+    &ltdel&gt: <del>text that was deleted from a document</del> <br />
+
+    <br />
+    &ltq&gt: <q>quoted text</q> <br />
+    <br />
+    &ltsub&gt: <sub>subscript text</sub> <br />
+    <br />
+    &ltsup&gt: <sup>superscript text</sup> <br /> -->
+
+    <!-- Lists -->
+    <!-- Ordered list: numbered list items-->
+    <!-- <ol>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <ol>
+    <li>Nested ordered list</li>
+  </ol>
+  </ol> -->
+
+    <!-- Unordered list: bulleted list items -->
+    <!-- <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <ul>
+      <li>Nested unordered list</li>
+    </ul>
+  </ul> -->
+
+    <!-- Description list: terms with indented descriptions-->
+    <!-- <dl>
+    <dt>Web Development Languages</dt>
+    <dd>HTML</dd>
+    <dd>CSS</dd>
+    <dd>JavaScript</dd>
+    <ul>
+      <dd>Nested ul</dd>
+      <dd>Nested ul</dd>
+    </ul>
+    <ol>
+      <dd>Nested ol</dd>
+      <dd>Nested ol</dd>
+    </ol>
+  </dl> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Table -->
+    <!-- <table>
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>Header1</th>
+        <th>Header2</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>r1c1</td>
+        <td>r1c2</td>
+      </tr>
+      <tr>
+        <td>r2c1</td>
+        <td>r2c2</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td>r3c1</td>
+      </tr>
+    </tfoot>
+  </table> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Text -->
+
+    <!-- Page headings -->
+    <!-- <h1>&lth1&gt</h1>
+    <h2>&lth2&gt</h2>
+    <h3>&lth3&gt</h3>
+    <h4>&lth4&gt</h4>
+    <h5>&lth5&gt</h5>
+    <h6 id="six">&lth6&gt</h6> -->
+
+    <!-- Paragraph: line breaks do not matter -->
+    <!-- <p>
+      &ltp&gt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+      ipsum libero? Quibusdam debitis consequuntur illum? Temporibus nam
+      sapiente earum vel laboriosam illum blanditiis cumque itaque, nobis harum
+      ea, sed adipisci!
+    </p> -->
+
+    <!-- Preformatted Text: line breaks matter -->
+    <!-- <pre>
+&ltpre&gt: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Culpa, reprehenderit blanditiis facere, nulla doloremque dolores voluptates at amet
+    ducimus atque numquam quas cum neque beatae magni. 
+    Illum dicta officia maiores?
+  </pre> -->
+
+    <!-- Details: toggle to display -->
+    <!-- <details>
+      <summary>Click to display or hide</summary>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum accusamus
+        incidunt eos! Ipsum nostrum facilis ipsam reprehenderit cum veniam odio
+        reiciendis molestiae perferendis vel. Doloribus quae perferendis libero
+        quis nisi?
+      </p>
+    </details> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Line breaks and horizontal rules -->
+    <!-- <span>Span1 (inline element)</span>
+    <br />
+    <br />
+    <br />
+    <span>Span2, 3 lines below</span>
+    <hr /> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- Links with onclick functionality -->
+
+    <!-- Redirecting to another domain -->
+    <!-- <a href='https://www.google.com'>Google</a> <br> -->
+
+    <!-- target attribute lets you specify where to open linked documents
+      _self (default): same frame as it was clicked
+      _blank: new window or tab
+      _parent: parent frame
+      _top: full body of the window
+    -->
+    <!-- <a href="https://www.google.com" target="_self">Google "_self"</a> <br />
+    <a href="https://www.google.com" target="_blank">Google "_blank"</a> <br /> -->
+
+    <!-- Redirect to local .html page -->
+    <!-- <a href="./pages/page1.html">Page One (Relative)</a> <br />
+    <a href="./../pages/page1.html">Page One in Another folder (Relative)</a>
+    <br /> -->
+
+    <!-- absolute wont work if using live server extension -->
+    <!-- <a href="/Users/username/pages/page1.html"> Page One (Absolute)</a> <br /> -->
+
+    <!-- Do nothing -->
+    <!-- <a href="javascript:void(0)">javascript:void(0)</a> </br> -->
+
+    <!-- Jump to different elements -->
+    <!-- <a href="#">#</a> -->
+    <!-- <a href="#six">Jump to last heading</a> <br>  -->
+
+    <!-- <iframe
+      src="./pages/page1.html"
+      title="Page1"
+      width="500px"
+      height="500px"
+    ></iframe> -->
+
+    <!-- Figures and images -->
+    <!-- <figure>
+      <img
+        src="./images/landscape.jpeg"
+        alt="Landscape"
+        width="200px"
+        height="200px"
+      />
+      <br />
+      <figcaption>Fig. 1- Landscape</figcaption>
+    </figure> -->
+
+    <!-- <img
+      src="images/landscap.jpeg"
+      alt="Landscape"
+      width="200px"
+      height="200px"
+    />
+    <br /> -->
+
+    <!-- <img
+      width="300"
+      src="data:image/png;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAxVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zda/P9qhPz/mKr9/7bC/f/Fz/7/ydL+/8HM/v+tu/3/jaH9/156/P8zV/z/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/z9h/P+gsP3/8fP+/////////////////////////////////////////////////+ru/v+Zqv3/PV/8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P9lgPz/6+/+///////////////////////////////////////////////////////////////////////s7/7/Y378/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/aoT8//r6/v///////////////////////v7+/+Po/v/R2f7/y9T+/9rg/v/3+f7////////////////////////////j6P7/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/0Zm/P/w8/7/////////////////5+v+/4ab/f9AYvz/MVX8/zFV/P8xVfz/MVX8/zVY/P9kf/z/tsP9//39/v////////////T2/v8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/sL79/////////////////87W/v8/Yfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/ZYD8//L0/v//////n7D9/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/0Bh/P/6+/7////////////v8v7/QmP8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/TWz8/3GJ/P8yVvz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/e5L8/////////////////5qr/f8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P+mtv3/////////////////XHn8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/7/L/f////////////////87Xfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/ydL+////////////+/v+/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P/Ezv7////////////9/f7/M1b8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/7G//f////////////////9HZ/z/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/kqX9/////////////////22H/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P9kf/z/////////////////pbX9/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zRX/P/v8v7////////////s7/7/Nln8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/6Ky/f////////////////+Inf3/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/RWb8//f4/v////////////H0/v9Kafz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/PV/8/1Jw/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/kKT9/////////////////9vh/v9DZPz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/1Fv/P/m6/7//v7+/3aO/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8zVvz/xM79/////////////////+fr/v9viPz/MVX8/zFV/P8xVfz/MVX8/zRX/P+Emf3/8/X+////////////xc/+/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P87Xfz/ztf+///////////////////////i5/7/sL79/5+w/f+ywP3/6u3+//////////////////////+uvP3/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P83Wvz/sL79//7+/v//////////////////////////////////////////////////////3OL+/0Vl/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/aYP8/9Pb/v//////////////////////////////////////9fb+/5yu/f84W/z/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/1d0/P+Spf3/t8T9/8fR/v/Dzv7/qrn9/3uS/P88Xvz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/MVX8/zFV/P8xVfz/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+    />
+    <br /> -->
+
+    <!-- Form with fieldsets -->
+    <!-- label: "for" should have a value equal to the input's id -->
+    <!-- select: a dropdown with various options -->
+    <!-- name attribute is needed to get the data -->
+    <!-- input type radio: if all have the same name, you can only select one option -->
+
+    <!-- <form>
+      <fieldset>
+        <legend>Text Inputs and Labels</legend>
+        <label>First name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Dropdown List</legend>
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+          <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+          </optgroup>
+          <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Textarea with a button</legend>
+        <textarea></textarea>
+        <br />
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form> -->
+
+    <!-- <form>
+      <fieldset>
+        <legend>Simple Inputs</legend>
+        <label>Disabled Email</label>
+        <input
+          type="text"
+          placeholder="Disabled email"
+          name="email"
+          disabled="true"
+        />
+
+        <br />
+        <label>Readonly Email</label>
+        <input type="text" name="email2" readonly="true" value="email" /> <br />
+        <label>Required Email</label>
+        <input type="text" name="email3" required="true" /> <br />
+        <label>Username</label>
+        <input type="text" name="name" /> <br />
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="your password"
+          name="psw"
+          value="hello"
+        />
+        <br />
+        <label>Date</label>
+        <input type="date" name="date" /> <br />
+        <label>Time</label>
+        <input type="time" name="time" /> <br />
+        <label>Number</label>
+        <input type="number" name="number" /> <br />
+        <label>File</label>
+        <input type="file" name="file" /> <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Inputs</legend>
+        <input type="radio" id="male" name="gender" value="male" checked />
+        <label for="male">Male</label> <br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Checkbox Inputs</legend>
+        <input type="checkbox" id="java" name="java" value="java" />
+        <label for="java">Java</label> <br />
+        <input
+          type="checkbox"
+          id="javascript"
+          name="JavaScript"
+          value="JavaScript"
+        />
+        <label for="javascript">JavaScript</label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form> -->
+  </body>
+</html>

@@ -13,8 +13,8 @@
 // });
 
 // Promise.all([promise1, promise2, promise3])
-//   .then(result => console.log("Promise.all() results =", result))
-//   .catch(result => console.log("Error =", result));
+//   .then((result) => console.log("Promise.all() results =", result))
+//   .catch((result) => console.log("Error =", result));
 
 // -----------------------------------------
 // Using Promise.allSettled() to get all the Promise results before continuing execution.
@@ -31,5 +31,5 @@
 //   setTimeout(() => reject(`Promise 3: ${new Date()}`), 3000);
 // });
 // Promise.allSettled([promise1, promise2, promise3])
-//   .then(result => console.log("Promise.allSettled() results =", result))
-//   .catch(result => console.log("Error =", result));
+//   .then((result) => console.log("Promise.allSettled() results =", result))
+//   .catch((result) => console.log("Error =", result));

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <style type="text/css">
+    .container {
+      width: 400px;
+      height: 400px;
+      background-color: lightblue;
+      margin: 1rem;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      color: white;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* -------------------------------------------------------------------------------- */
+    /* Transforms */
+
+    #transform {
+      background-color: blue;
+      /* transform-origin: x-axis y-axis z-axis; */
+      /* transform-origin: bottom left; */
+      /* transform-origin: 50px 50px; */
+      /* transform-origin: bottom right 70px; */
+    }
+
+    .container:hover>#transform {
+      transform: rotate(90deg);
+      /* transform: rotate(.25turn); */
+      /* transform: rotateX(180deg); */
+      /* transform: rotateY(180deg); */
+
+      /* transform: scale(0.5); */
+      /* transform: scale(50%); */
+      /* transform: scale(0.5, 2); */
+      /* transform: scaleX(0.5); */
+      /* transform: scaleY(2); */
+
+      /* transform: translate(50px, 50px); */
+      /* transform: translateX(100%); */
+
+      /* transform: rotate(90deg) scale(0.5); */
+    }
+
+    /* -------------------------------------------------------------------------------- */
+    /* Transitions */
+    #transition {
+      background-color: chocolate;
+
+      /* transition: property duration timing-function delay */
+
+      /* transition: 1s ease; */
+      /* transition: 1s ease-in; */
+      /* transition: 1s ease-out; */
+      /* transition: 1s ease-in-out; */
+
+      /* transition: 1s ease 1s; */
+    }
+
+    .container:hover>#transition {
+      transform: rotate(90deg) scale(1.5);
+      background-color: yellow;
+      width: 500px;
+      font-size: 100px;
+    }
+
+    /* -------------------------------------------------------------------------------- */
+    /* Animations */
+    #animation {
+      background-color: darkslateblue;
+    }
+
+    @keyframes around {
+      25% {
+        transform: translateX(100%);
+        background-color: aliceblue;
+      }
+
+      50% {
+        transform: translate(100%, 100%);
+        background-color: aqua;
+      }
+
+      75% {
+        transform: translateY(100%);
+        background-color: cornflowerblue;
+      }
+
+      100% {
+        transform: translate(0);
+        background-color: dodgerblue;
+      }
+    }
+
+    .container:hover>#animation {
+      /* animation: name duration timing-function delay iteration-count direction */
+
+      /* animation: around 1s ease-in-out 1; */
+      animation: around 1s ease-in-out infinite;
+      /* animation: around 1s ease-in-out reverse; */
+      /* animation: around 1s ease-in-out infinite alternate; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="transform" class="box">Transform</div>
+  </div>
+  <div class="container">
+    <div id="transition" class="box">Transition</div>
+  </div>
+  <div class="container">
+    <div id="animation" class="box">Animation</div>
+  </div>
+</body>
+
+</html>

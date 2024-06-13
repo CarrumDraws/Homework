@@ -1,0 +1,21 @@
+{
+  "name": "lec06-node",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "intro": "nodemon 1-intro",
+    "modules": "node --watch 2-core_modules",
+    "validator": "node --watch 3-validator",
+    "eventloop": "node --watch 4-event_loop",
+    "eventemitter": "node --watch 5-event_emitter"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
+}

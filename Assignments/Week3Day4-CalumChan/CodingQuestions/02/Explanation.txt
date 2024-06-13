@@ -1,0 +1,3 @@
+Figure One shows the XSS attack in action. Modern browers like Chrome have special defensive precautions to deter XSS attacks, so the alert doesn't actually pop up. However, you can clearly see in devtools that the alert has been added as a seperate <script> node in the DOM, not as innerHTML like we want.
+
+FIgure Two shows the XSS attack supressed via the validator.escape() method. validator.escape() sanitizes our strings and protects from XSS attacks. It character encodes special characters wtih HTML meaning, like '<' => '&lt;'. This ensures that user-inputted content is treated as plaintext. You can see it succeed in chrome devtools.

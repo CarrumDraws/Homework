@@ -1,0 +1,37 @@
+1. Name some advantages of React : 
+    It is the most popular FE framework and has a Low Learning Curve. React has Component-Based Architecture, which enables you to easily build isolated components that can be reused thorughout the application. It is a very flexible library, meaning that other libraries can be easily integrated into it. React also uses a virtual DOM, which is a lightweight representation of the real DOM. This results in better perfomance when dealing with DOM updates.
+2. What is JSX : 
+    Javascript XML. With it, you can write HTML-like syntax directly wihtin JS, essentially combining them both. This is more intuitive and easier to understand. JSX is compiled into JS via compilers such as Babel. 
+3. What does ReactDOM.render() do : 
+    It is a method of the react-dom package. It takes a DOM element 'element' and renders it into a container 'container' like so ReactDOM.render(element, container, [callback]). It also takes an array of callbacks that trigger after the operation is over, which is typically used for side effects. After React 18, it has been somewhat replaced by ReactDOM.createRoot(container).render(element).
+4. What is the difference between class component with function component (from state, props perspectives) : 
+    Both offer encapsulation of UI logic, but they have their advantages and disadvantages. When dealing with class components, your frequently also have to deal with the "this" keyword and binding. Functional components, however, use hooks for state, and have no need to manage the this keyword. Even when dealing with props in a class componentnt you have to use the "this" keyword, such as {this props.name}. For a fucntional component, props are accessible thorugh the props parameter via {props.name}. [---REDO---]
+5. What is props : 
+    Props are values that you can pass into a functional/class component. In a class component you must create a constructor to access props, along with the super(props) call in order to initialize the "this" keyword, to access your defined props with this.props.name. While a functional component accesses them recieves props directly as arguements, via props.name, assuming you are passing in a "props" parameter into the function. [---CHECK---]
+6. What is state : 
+    State is like an internal record of data values that is specific to each instance of a component. When state changes, the component automatically rerenders. In a class components, state is initialized in the constructor with "this.state = {}", and accessed with this.setState({}). In functional components, you use the useState hook.
+7. How to update the state
+    In a class components, state is initialized in the constructor with "this.state = {}", and accessed with this.setState({}). In functional components, you use the useState hook.
+8. What is refs
+    Refs are reacts alternative to functions like document.getElementById. Since the virtual dom doesn't directly manipulate the real dom, using document.getElementById can lead to side effects and insonsistencies. Refs are also locally scoped to their compoentn while document.getElementById is globally scoped. Refs also integrate with lifecycle better.
+9. What is the difference between controlled component with uncontrolled component : 
+    They are two approaches to managing form inputs and form state in react. Controlled means that each form input is tied toa specific state, and the state must be updated upon every form change. Uncontrolled takes advantage of the form element's internal state, and just slaps a ref on the input elememts, not managing the state directly. Controlled components are better for complex form logic, such as handling validation, defining specific form interactions/state, etc.
+10. What is virtual Dom
+    The virtual dom is a lightweight representation of the actual DOM. By minimizing direct manipulations/updates to the actual DOM via using Reconcilliation, only necessary parts of the dom get updated instead of the entire DOM tree.
+11. Can you talk about the diffing algorithm :
+    It's an angorithm used by react to check for differences ("Diffs") between the current virtual DOM and the old virtual DOM, to determine the correct order of operations for an efficient DOM update.
+12. What would happen if setting state in render function
+    The render fucntion, used in class compoennts, describes the structure of the UI elements that should be displayed on the screen. Setting state in th erender function can lead to an infinate loop, as everytime a compoennt's state/props change, the reder methdo is called. By setting the state in the render method, the state will get continually called, leading to an infinate loop.
+13. Can you talk about different life cycle hooks in react?
+    Catergorized into three phases: Mounting, Updating, and Unmounting.
+        Mounting: Component is created = interted into DOM
+            - constructor() : Initializes state + binds event handlers
+            - render() : Required in a class component. Returns the JSX needed to render the component. Should be pure.
+            - componentDidMount() : Invoked immediately after the component is mounted- used for data fetching
+        Updating: 
+            - render(): called again on state/prop updates
+            - componentDidUpdate(): Invoked immediately after Updating
+        Unmounting:
+            - Invoked immediately before a component is unmounted. Useful for cleanup tasks (cancelling requests, removing event listeners etc)
+14. What is pure component?
+    React.PureComponent implements a component with a shallow prop and state comparison to determine if it should rerender. It is an optimization technique that prevents a child from rerendering if its parent rerenders, given that its props/state values/refernces are the same. Note that updating a property in an object doesn't change its reference, therefore a purecomponent wont update.

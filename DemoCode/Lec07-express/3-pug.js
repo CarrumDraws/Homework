@@ -5,8 +5,7 @@ const app = express();
 // (this is where pug looks)
 app.use(express.static("public"));
 
-// set the template engine to pug
-// What is a template engine?
+// Set the template engine to pug
 app.set("view engine", "pug");
 
 // Home Page : Looks in "views" folder for "index" file

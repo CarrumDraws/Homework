@@ -1,0 +1,19 @@
+1. What is Node.js? : A singlethreadded serverside JS runtime environment. It runs on the V8 engine and supports Event-driven architecture.
+2. What are some differences between Node.js and JavaScript? : Javascript is a language while Node.js is a serverside runtime environment for JS. JS is primarily used for Frontend development, but Node.js allows you to use JS for backend developemnt as well. JS has built-in Web API's like fetch, while node.js has built-in core modules.
+3. What is npm? : Node Package manager: A package manager for JS that allows you to use third-party libraries.
+4. What is CommonJS? How does it differ from ES Modules? : CommonJS is a specification for handling modules in serverside JS runtime env's like Node.js. a CommonJS Module is a module system taht follows CommonJS specifications. CommonJS uses require/module.exports() to connect modules instead of import/export like ESM. CommonJS has access to the this keyword ({}) while ESM's dont, since ESM's default to strict mode. CommonJS modules require() is loaded syncronously and are loaded on demand, while ESM imports are loaded asyncronously and the imports must be declared at the top of the page.
+    1. How do we import files into other files in Node.js? : Node.js supports both CJS and MJS files, so they can be imported with require() and import respectively.
+5. How can you make the server automatically restart when files are modified? : Use the nodemon library or use the --watch flag in a script.
+6. What are some global objects in Node.js? : the 'global' keyword and the process object 
+7. Explain how the Node.js architecture is event-driven in terms of event emitters and other core modules. : Flow of the program is determined by events as they are processed in the event loop. EventEmiters allow for teh emitting and detection of named events. The HTTP ,fs, and stream modules are built off EventEmiters.
+8. What are streams? In Node.js, what are the different kinds of streams? : Streams are a way to read/write large chunks of data, as there is no need to process/store all the data at once. There are Writable, Readable, Duplex, and Transform streams.
+9. What is the difference between fs module’s readFile and createReadStream? : While both are asyncronous, readFile gets all the data at once while createReadStream uses a stream, which is more efficient for larger chunks of data.
+10. What are the different timing or scheduling functions in Node.js? : setTimeout, setInterval, setImmediate (Triggers a callback once event loop completes including any pending I/O operations), process.nextTick() (Triggers a callback function immediately after the current operation completes, before the event loop moves to the next phase), eventEmitters 
+11. How does the event loop work in Node.js? : The event loop is what enables Node.js to perform non-blocking I/O Operations. Like normal JS, it consists of a Macrotask Queue and Microtask Queue. The Microtask queue mainly stores process.nextTick() callbacks and Promises. The Macrotask Queue has 6 phases:
+    1. Timers phase : Executes setTimeout() and setInterval() callbacks
+    2. Pending Callbacks phase : I/O Operation callbacks handled here
+    3. Idle, prepare Handlers Phase
+    4. Poll phase : Retireves new I/O events
+    5. Check phase : Exeutes setImmediate() callbacks
+    6. Close callbacks phase : Executes Close event callbacks
+12. How do you manage multiple node versions? : Use a NVM (Node Version Manager)!

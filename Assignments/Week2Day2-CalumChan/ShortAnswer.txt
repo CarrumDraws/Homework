@@ -1,0 +1,40 @@
+1. What are the disadvantages of synchronous code? : Synchronous code is executed line by line, meaning that long-running operations will block code execution.
+2. What is asynchronous code in JavaScript? : Code that doesn't need to finish execution before the next line is executed. It prevents long-running operations from blocking execution.
+3. How does JavaScript achieve asynchronous code? : AJAX, XMLHTTPRequests, promises like fetch, setTimeout, setInterval, and event listeners.
+4. What does the event loop do? What data structures does it use? : It handles and manages the execution of synchronous and asychronous code. It uses a call Stack, and Task Queue, which consists of the Macrotask queue and Microtask queue.
+5. What is the callback queue? : It's another name for the Task Queue, which handles asynchronous code. It consists of the Macrotask queue and Microtask queue.
+6. What is an HTTP request and HTTP response? : Both make up the Hypertext transfer protocol. Requests are sent from clients to servers to retrieve/submit data, and responses are sent from server to client to confirm their request/send back data.
+7. How many HTTP methods are there? Explain each one.
+    GET : Requests data from a resource. Lacks a body, but can still send data via queries.
+    POST : Sends data to a specified location. Contains a body.
+    PUT : Sends data to a server to replace a resource. Similar to POST but is Idempotent.
+    DELETE : Sends data to a server, telling it what to delete. 
+    1. What is the difference between GET and POST? : POST has a body
+    2. What about POST and PUT? : PUT is Idempotent
+8. Could you explain the different classes of HTTP status codes? What are some common status codes?
+    100 - 199 : informational responses
+    200 - 299 : Success responses
+        200 : OK
+        201 : Created
+    300 - 399 : Redirection
+        301 : Moved Permanantly
+    400 - 499 : Client Error
+        400 : Bad Request : Request lacks info, has typos, etc
+        401 : Unauthorized : Request requires user auth
+        403 : Forbidden : Client is logged in but not allowed to access resource
+        404 : Resource Not Found
+    500 - 599 : Server Error    
+        500 : Internal Server Error
+        503 : Service Unavailable
+9. What is AJAX? : ASync JS and XML : AJAX is an ES5 tecqnique/concept that enables you to make async requests using Callbacks without reloading the whole page. It is built upon XHR. XML is the language used by AJAX to transport data- it is similar to, and is actively getting replaced by, JSON.
+10. What is XHR? : XMLHttpRequest : It's an object that AJAX centers around. Thorugh the XHR object, you can Send out an AJAX request, Load it, Access its status, track it's progress and even handle errors. It supports GET, POST, PUT, DELETE. 
+11. What is a Promise? : An object that represents the eventual completion/failure of an asynchronous operation and its resulting value. Introduced in ES6, they are an alternative to Callbacks.
+12. How many states does a Promise have? What are they? : 3- Pending, Fufilled, Rejected
+13. What is callback hell? : It is an ES5 problem when multiple callbacks rely on the previous callback's return data, leading to buggy and difficult to fix code. 
+14. What is the advantage of Promises over callbacks? : Promises are Cleaner, more readable, and easier to debug/error handle. The .then() call simplifies the handling of response data . Also the .catch() method catches all errors, so you don't need to check for each error for each async call.
+15. Explain Promise.all() vs Promise.allSettled(). : 
+    Promise.all() takes an input array of promises and returns a single promise that resolves when they all resolve. If one fails, the whol thing fails.
+    Promise.allSettled() is like Promise.all() but it always resolves with an array of all results, for each promise status and result.
+16. What is the Microtask Queue? : Stores promises specifically. They have a higher priority than other async tasks like event listeners or timeouts or intervals, so they take priority in the call stack if possible.
+17. What is the difference between making server requests via fetch and XHR? : Fetch is an alternative to AJAX and provides a simpler and more concise way to perform the same operations. You don't have to deal wiht callbacks and instead use promises, which enables access to Promise chaining. On top of that, you can use Async/await with try/catch blocks to further enhance Fetch.
+18. What is async & await? How do we use them? : They are an alternative to promise chaining with .then and .catch. async means that the fucntion it is attatched to always returns a promise. Await is used within an Async function and, when passed a promise, waits for the promise to resolve before continuing. if it is attached to a non-promise, it is still asyncronous but is non-blocking. 

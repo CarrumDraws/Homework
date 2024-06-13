@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SVG Demo</title>
+    <style type="text/css"></style>
+  </head>
+
+  <body>
+    <svg height="50" width="50">
+      <rect width="50px" height="20px" style="fill: yellow" />
+    </svg>
+    <hr />
+    <svg height="50" width="50">
+      <circle cx="25" cy="25" r="25" fill="red" />
+    </svg>
+    <hr />
+    <svg height="50" width="50">
+      <polygon
+        points="5,5 20,20 40,10 "
+        style="fill: lime; stroke: purple; stroke-width: 3"
+      />
+    </svg>
+    <hr />
+    <svg height="50" width="50">
+      <defs>
+        <!--defs element is used to store graphical objects that will be used at a later time -->
+        <linearGradient id="linearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color: yellow" />
+          <stop offset="100%" style="stop-color: red" />
+        </linearGradient>
+      </defs>
+      <circle cx="25" cy="25" r="25" fill="url(#linearGradient)" />
+    </svg>
+    <hr />
+    <svg height="50" width="50">
+      <defs>
+        <!-- The cx, cy and r attributes define the outermost circle and the fx and fy define the innermost circle -->
+        <radialGradient
+          id="radialGradient"
+          cx="50%"
+          cy="50%"
+          r="50%"
+          fx="50%"
+          fy="50%"
+        >
+          <stop offset="0%" style="stop-color: white; stop-opacity: 0" />
+          <stop offset="100%" style="stop-color: red" />
+        </radialGradient>
+      </defs>
+      <circle cx="25" cy="25" r="25" fill="url(#radialGradient)" />
+    </svg>
+
+    <hr />
+    <img src="images/horseracer.svg" alt="svg" width="150" height="150" />
+    <img src="images/horseracer.svg" alt="svg" width="500" height="500" />
+  </body>
+</html>

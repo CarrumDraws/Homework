@@ -1,0 +1,16 @@
+What is "this?"
+The this keyword refers to the object that is currently executing the code. 
+Its value depends on the context in which it is used.
+
+Outside: The Global Object
+In a Function: The Global Object
+In an Object Method: The Object itself
+In an Arrow Function: Retains the "this" value of the surrounding scope
+
+Direct vs Indirect Calls
+user.logUser(); 
+Calls logUser directly: "this" = 'user' : the function is invoked as a method of the 'user' object.
+
+let logFn = user.logUser; 
+logFn(); 
+Calls logUser indirectly: "this" = global object : the function is called as a "standalone" function

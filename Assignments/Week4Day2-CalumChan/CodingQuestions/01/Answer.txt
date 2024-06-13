@@ -1,0 +1,12 @@
+What is the problem of following code snippet, how to fix it?
+    this.setState({
+        counter: this.state.counter + this.props.increment,
+    });
+
+this.setState is async. If you call this function multiple times, this.state.counter may not be the most updated value, since this setState depends on the previous state to calculate the new value.
+
+    this.setState((state, props) => {
+        return {counter: state.counter + props.increment};
+    });
+
+Instead, use a function that accesses the previous state + props reliably via the "state" and "props" argument. 

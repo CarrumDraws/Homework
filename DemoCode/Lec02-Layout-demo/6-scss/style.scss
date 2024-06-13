@@ -1,0 +1,115 @@
+// Importing partials with @import: only need to specify the url or file path, no _ or file ext.
+@import "variables";
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+// ---------------------------------------------------------------------------------------
+// Nested selector hierarchy => descendant combinator selector
+// & references the parent selector, and substitutes it
+
+ul {
+  background-color: aqua;
+  li {
+    color: coral;
+    &:hover {
+      background-color: palevioletred;
+    }
+    &:first-child {
+      color: darkblue;
+    }
+    &::first-letter {
+      font-size: 30px;
+    }
+
+    span {
+      font-size: 20px;
+      font-style: italic;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------
+// Mixin
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid orange;
+}
+
+// Declaring class styles using a mixin will copy all of the mixin properties into that class
+.flex-lg {
+  @include flexCenter;
+  width: 80%;
+}
+.flex-sm {
+  @include flexCenter;
+  width: 50%;
+}
+
+// ---------------------------------------------------------------------------------------
+// Mixin with parameters
+@mixin divItem($margin) {
+  padding: 30px;
+  background-color: pink;
+  margin: 0px $margin;
+}
+
+// Declaring class style using a mixin with parameters
+.item {
+  @include divItem(20px);
+}
+
+// ---------------------------------------------------------------------------------------
+// To use mixins with interpolation (dynamic selectors) wrap the parameter in #{ }
+@mixin corner-icon($name) {
+  .icon-#{$name} {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+}
+
+#img-container {
+  height: 200px;
+  width: 700px;
+  border: 2px orange solid;
+
+  @include corner-icon("meta");
+}
+
+// ---------------------------------------------------------------------------------------
+// Inheritance: extending another rule combines it into one rule with the grouping selector (,)
+// The declarations that aren't shared become its own rule
+
+// Extending a rule that included a mixin
+.item-hover {
+  @extend .item;
+  &:hover {
+    color: red;
+    font-size: 30px;
+  }
+}
+// ---------------------------------------------------------------------------------------
+// Placeholder selectors (%) let us declare rules that can other rules can inherit from.
+// Use it when you have related rules, like the flex properties shared by .flex-lg and .flex-sm.
+%flexCenterPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid orange;
+}
+
+.flex-lg {
+  @extend %flexCenterPlaceholder;
+  width: 80%;
+}
+.flex-sm {
+  @extend %flexCenterPlaceholder;
+  width: 50%;
+}

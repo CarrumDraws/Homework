@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Float</title>
+    <style type="text/css">
+      /* *{
+      margin: 0px;
+    } */
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        text-align: center;
+      }
+
+      .big {
+        width: 150px;
+        height: 150px;
+      }
+
+      /* -------------------------------------------------------------------------------- */
+      /* Position */
+      .offset {
+        /* The element needs to be positioned to use this offsets.
+      Avoid setting values for opposite sides (top & bottom) or (left & right). By default, top overrides bottom and left overrides right.
+      */
+        /* top: 0 */
+        top: 1rem;
+        /* bottom: 1rem; */
+        /* left: 1rem; */
+        /* right: 1rem; */
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      .fixed {
+        position: fixed;
+      }
+
+      .sticky {
+        position: sticky;
+      }
+
+      /* -------------------------------------------------------------------------------- */
+      /* Z-index */
+      .z-index {
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Float, Clear -->
+    <!-- <div style="float: left">1</div>
+    <div style="float: left; background-color: gray">2</div>
+    <div style="float: right; height: 150px; background-color: pink">3</div> -->
+
+    <!-- Wrapping text due to float -->
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur
+      sapiente, ducimus incidunt quod explicabo, cumque dicta illo expedita qui
+      esse eveniet temporibus delectus fugiat, similique doloremque atque?
+      Maiores, consectetur!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur
+      sapiente, ducimus incidunt quod explicabo, cumque dicta illo expedita qui
+      esse eveniet temporibus delectus fugiat, similique doloremque atque?
+      Maiores, consectetur! lore
+    </p>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis illo
+      suscipit quam placeat voluptates quas eligendi praesentium obcaecati
+      dolorem, rem pariatur perferendis atque blanditiis. Esse repellendus quis
+      obcaecati corrupti rerum. Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit. Qui, at. Aspernatur similique quibusdam quis voluptatem
+      fugiat non omnis ullam alias quod, cum nihil voluptas officiis impedit
+      vero autem facilis. Autem.
+    </p> -->
+
+    <!-- Clear None -->
+    <!-- <p style="clear: none">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, neque. Hic
+      corporis ipsum neque est qui tenetur ipsam placeat praesentium nemo
+      voluptate id at quis iure nulla, laboriosam mollitia natus!
+    </p> -->
+
+    <!-- Clear Left -->
+    <!-- <p style="clear: left">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, neque. Hic
+      corporis ipsum neque est qui tenetur ipsam placeat praesentium nemo
+      voluptate id at quis iure nulla, laboriosam mollitia natus!
+    </p> -->
+
+    <!-- Clear Right -->
+    <!-- <p style="clear: right">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, neque. Hic
+      corporis ipsum neque est qui tenetur ipsam placeat praesentium nemo
+      voluptate id at quis iure nulla, laboriosam mollitia natus!
+    </p> -->
+
+    <!-- Clear Both -->
+    <!-- <p style="clear: both">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, neque. Hic
+      corporis ipsum neque est qui tenetur ipsam placeat praesentium nemo
+      voluptate id at quis iure nulla, laboriosam mollitia natus!
+    </p> -->
+
+    <!-- Position -->
+    <!-- <div>1</div> -->
+
+    <!-- Relative -->
+    <!-- <div class="relative" style="background-color: cornflowerblue">
+      relative
+    </div>
+    <div class="relative offset" style="background-color: cornflowerblue">
+      relative
+    </div> -->
+
+    <!-- Absolute, no positioned ancestor, uses viewport or normal position -->
+    <!-- <div class="absolute offset" style="background-color: violet">
+      absolute, offset
+    </div>
+    <div class="absolute" style="background-color: cornflowerblue">
+      absolute, no offset
+    </div> -->
+
+    <!-- Absolute, positioned ancestor, uses ancestor position -->
+    <!-- <div class="relative" style="background-color: blueviolet">
+      <div class="absolute offset" style="background-color: cornflowerblue">
+        absolute with/without offset, positioned ancestor
+      </div>
+    </div> -->
+
+    <!-- Fixed, uses viewport or normal position, scrolls -->
+    <!-- <div class="fixed offset" style="background-color: cornflowerblue">
+      fixed offset
+    </div> -->
+
+    <!-- Sticky, offset, uses viewport, bounded by parent -->
+    <!-- <div class="big" style="background-color: blueviolet">
+      <div class="sticky offset" style="background-color: cornflowerblue">
+        sticky offset
+      </div>
+    </div> -->
+
+    <!-- <div style="background-color: pink; height: 500px">other</div> -->
+
+    <!-- Z-index -->
+    <!-- <div class="c" style="z-index: 1"></div>
+    <div
+      class="z-index offset"
+      style="background-color: rgba(255, 0, 0, 0.4); z-index: 2"
+    ></div> -->
+  </body>
+</html>

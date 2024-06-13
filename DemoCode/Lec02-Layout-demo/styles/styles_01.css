@@ -1,0 +1,186 @@
+/* Set up box properties for the demo */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+
+/* Box Model */
+#box {
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+/* Content */
+#content-parent {
+  background-color: red;
+  /* Responsiveness: parent and child size depend on viewport/screen size */
+  width: 50vw;
+  height: 25vh;
+  max-width: 350px;
+}
+
+#content {
+  height: 50%;
+  width: 50%;
+}
+
+.content-overflow {
+  margin: 1em;
+
+  /* overflow: visible; */
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+  /* overflow: auto; */
+  /* overflow: visible; */
+}
+
+/* Border */
+#border {
+  margin: 10px;
+
+  /* setting it with shorthand, all-around width */
+  border: 10px solid black;
+
+  /* setting individual border widths 
+      border-width: 15px 10px 5px 0px; 
+      border-width: 15px 10px 5px; 
+      border-width: 15px 5px; 
+      border-width: 15px 
+      */
+  border-width: 15px 10px 5px 0px;
+
+  /* setting individual border color and style, with same pattern */
+  /* border-color: black red;
+      border-style: dotted dashed; */
+
+  /* making rounded borders */
+  /* border-radius: 3px; */
+  /* border-radius: 3rem; */
+}
+
+/* Padding */
+#padding {
+  /* setting individual paddings 
+      padding: 15px 10px 5px 0px; 
+      padding: 15px 10px 5px; 
+      padding: 15px 5px; 
+      padding: 15px 
+      */
+  padding: 15px;
+  /* padding: 15px 10px 5px 0px; */
+}
+
+/* Margin */
+#margin {
+  background-color: gray;
+
+  /* Move this element in the opposite direction */
+  /* margin-top: 0; */
+  /* margin-top: -1rem; */
+  /* margin-left: 0; */
+  /* margin-left: 1rem; */
+
+  /* Move sibling elements in this direction */
+  /* margin-bottom: 0; */
+  /* margin-bottom: 20px; */
+  margin-bottom: 50px;
+  /* margin-bottom: -50px; */
+
+  /* Can set margin on all sides for shorthand */
+  /* margin: 15px 10px 5px 0px; */
+  /* margin: 15px 10px 5px; */
+  /* margin: 15px 5px; */
+  /* margin: 15px */
+}
+
+#margin-sibling {
+  margin-top: 0;
+
+  /* Margin collapse: same sign vs different sign */
+  /* margin-top: 20px; */
+  /* margin-top: -20px; */
+}
+
+/* Calculating child element's margin */
+
+#parent {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+#child {
+  background-color: grey;
+
+  /* Constant width, left margin auto, unspecified right margin, left fills parent */
+  /* margin-left: auto; */
+
+  /* Constant width, right margin auto, unspecified left margin, right fills parent */
+  /* margin-right: auto; */
+
+  /* Constant width, margin: auto, margin is equal on both sides */
+  /* margin: auto; */
+
+  /* Width is auto, unspecified margin or auto, both margins 0 */
+  /* width: auto; */
+}
+
+/* Box-sizing */
+.content-box {
+  margin: 1em;
+  border: 3px solid blue;
+
+  /* size = width/height + padding, border, margin */
+  width: 300px;
+  height: 100px;
+}
+
+.border-box {
+  margin: 1em;
+  border: 3px solid red;
+
+  /* size = width/height, until padding + border exceed it */
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+}
+
+.padded {
+  padding: 1rem;
+}
+
+/* Border vs Outline */
+#border-demo {
+  border: 5px pink solid;
+}
+
+#outline-demo {
+  /* border: 5px cornflowerblue solid; */
+  outline: 5px gold solid;
+}
+
+/* Box-shadow */
+#shadow-outset {
+  margin: 1rem;
+
+  /* values: h-offset v-offset blur spread color 
+      box-shadow: 20px 20px 10px 10px cornflowerblue; 
+      box-shadow: 20px 20px 10px 10px;
+      box-shadow: 20px 20px 10px; 
+      box-shadow: 20px 20px;
+      */
+  box-shadow: 20px 20px 10px 10px cornflowerblue;
+}
+
+#shadow-inset {
+  margin: 2rem 1rem;
+  box-shadow: 20px 20px 10px 10px gold inset;
+}

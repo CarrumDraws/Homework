@@ -1,0 +1,199 @@
+{
+  "info": {
+    "_postman_id": "24020fa2-ed4e-47ac-a679-916fd879d83b",
+    "name": "Express Mongoose",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "34353152"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get User By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/user/{{USER_ID}}",
+              "host": ["{{BASE_URL}}"],
+              "path": ["user", "{{USER_ID}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"Test\",\r\n    \"password\": \"123456789Abc!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/user",
+              "host": ["{{BASE_URL}}"],
+              "path": ["user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"Update\",\r\n    \"password\": \"123456789Abc!\",\r\n    \"todos\": [],\r\n    \"_id\": \"665fc96f55f4eb570fff0428\",\r\n    \"__v\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/user",
+              "host": ["{{BASE_URL}}"],
+              "path": ["user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/user/{{USER_ID}}",
+              "host": ["{{BASE_URL}}"],
+              "path": ["user", "{{USER_ID}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Todo",
+      "item": [
+        {
+          "name": "Get Todo By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/todo/{{TODO_ID}}",
+              "host": ["{{BASE_URL}}"],
+              "path": ["todo", "{{TODO_ID}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Todos By User ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/todo/all/{{USER_ID}}/1/2",
+              "host": ["{{BASE_URL}}"],
+              "path": ["todo", "all", "{{USER_ID}}", "1", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Todo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"New Todo\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/todo/{{USER_ID}}",
+              "host": ["{{BASE_URL}}"],
+              "path": ["todo", "{{USER_ID}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Toggle Todo Status",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/todo/{{TODO_ID}}",
+              "host": ["{{BASE_URL}}"],
+              "path": ["todo", "{{TODO_ID}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Todo By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/todo/{{TODO_ID}}/{{USER_ID}}",
+              "host": ["{{BASE_URL}}"],
+              "path": ["todo", "{{TODO_ID}}", "{{USER_ID}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "USER_ID",
+      "value": "665fccf2c0c4e04dcd4eb079",
+      "type": "string"
+    },
+    {
+      "key": "TODO_ID",
+      "value": "665fccf2c0c4e04dcd4eb07b",
+      "type": "string"
+    }
+  ]
+}

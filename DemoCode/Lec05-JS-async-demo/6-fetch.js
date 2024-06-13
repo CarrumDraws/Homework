@@ -16,14 +16,15 @@
 
 // -----------------------------------------
 
-// // Handling response errors by looking at response HTTP status code.
+// Handling response errors by looking at response HTTP status code.
 // fetch("https://jsonplaceholder.typicode.com/todos/1")
 //   .then((response) => {
 //     console.log("response =", response);
-//     if (response.ok) return response.json();
+//     if (response.ok)
+//       return response.json(); // response.ok checks if status code in 200 - 299
 //     else throw new Error(`Error: Status ${response.status}`);
-//     // no explict return, return undefined
-//     // non-promise values => promise. Promise.resolve(undefined)
+//     // .then() returns 'undefined' if no return specified.
+//     // Non-promise values like 'undefined' are wrapped like 'Promise.resolve(undefined)'
 //   })
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log(error));
@@ -49,29 +50,32 @@
 // ------------------------------------------------------------------------------------
 // Fetch POST request
 
-// const btn = document.getElementById('fetchBtn');
-// btn.addEventListener('click', function () {
+// const btn = document.getElementById("fetchBtn");
+// btn.addEventListener("click", function () {
 //   const update = {
-//     title: 'Sample Title',
-//     body: 'sample body',
+//     title: "Sample Title",
+//     body: "sample body",
 //     userId: 1,
 //   };
 
-//   fetch('https://jsonplaceholder.typicode.com/posts', {
-//     method: 'POST',
+//   fetch("https://jsonplaceholder.typicode.com/posts", {
+//     method: "POST",
 //     headers: {
-//       'Content-Type': 'application/json',
+//       "Content-Type": "application/json",
 //     },
 //     body: JSON.stringify(update),
+//     // JSON.stringify() covnerts JS object to JSON string.
+//     // JSON.parse() covnerts JSON string to JS object.
+//     // Use these two to deep-copy arrays or objects.
 //   })
-//     .then(response => {
+//     .then((response) => {
 //       if (response.ok) return response.json();
 //       else throw new Error(response.status);
 //     })
-//     .then(data => {
+//     .then((data) => {
 //       console.log(data);
 //     })
-//     .catch(e => {
+//     .catch((e) => {
 //       console.log(e);
 //     });
 // });

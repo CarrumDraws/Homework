@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RWD</title>
+  <style type="text/css">
+    :root {
+      --font-size-lg: 2rem;
+      --header-height: 7.5rem;
+      --footer-height: 5rem;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid red;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      height: 25%;
+    }
+
+    .list-item {
+      margin: 1px;
+      flex-grow: 1;
+      background-color: yellowgreen;
+    }
+
+    header {
+      background-color: blueviolet;
+      height: var(--header-height);
+      font-size: var(--font-size-lg);
+      /* Center text */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: sticky;
+      top: 0;
+    }
+
+    footer {
+      background-color: steelblue;
+      height: var(--footer-height);
+      font-size: var(--font-size-lg);
+
+      /* Center text */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar {
+      height: 10rem;
+      background-color: dodgerblue;
+    }
+
+    /* ------------------------------------------------------------------------------- */
+    /* Breakpoints */
+    @media only screen and (min-width: 600px) {
+      .flex-container {
+        flex-direction: row;
+      }
+
+      .sidebar {
+        width: 30%;
+        height: 100%;
+      }
+
+      .list {
+        width: 30%;
+        height: 20%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ------------------------------------------------------------------------------- -->
+  <header>Header</header>
+
+  <div class="flex-container" style="height: 100vh; justify-content: space-between;">
+    <div class="list">
+      <div class='list-item'></div>
+      <div class='list-item'></div>
+      <div class='list-item'></div>
+      <div class='list-item'></div>
+    </div>
+
+    <div class="sidebar"></div>
+  </div>
+
+  <footer>Footer</footer>
+
+</body>
+
+</html>

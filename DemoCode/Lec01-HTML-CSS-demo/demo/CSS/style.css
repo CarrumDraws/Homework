@@ -1,0 +1,153 @@
+/* External, internal, inline CSS */
+/* h1 {
+  color: red;
+}
+h2 {
+  color: blue;
+}
+h3 {
+  color: green;
+} */
+
+/* Simple selectors */
+/* * {
+  background-color: gainsboro;
+}
+
+h1 {
+  color: red;
+}
+
+.h1 {
+  color: #4caf50;
+}
+
+h2,
+h3 {
+  color: black;
+}
+
+h1.h1.otherClass {
+  color: purple;
+}
+
+#h1 {
+  color: blue;
+} */
+
+/* combinator selectors */
+/* .list > li {
+  color: green;
+}
+
+.list li {
+  background-color: yellow;
+}
+
+li + ol {
+  color: purple;
+}
+
+li ~ span {
+  color: blue;
+} */
+
+/* Pseudo-classes */
+/* dt:first-child {
+  color: red;
+}
+dt:nth-child(2n) {
+  color: blue;
+}
+
+a:visited {
+  color: goldenrod;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  color: green;
+} */
+
+/* Pseudo-elements */
+/* p::first-letter {
+  font-size: 50px;
+}
+p::selection {
+  background-color: red;
+} */
+
+/* Attribute selectors */
+button[value] {
+  background-color: red;
+}
+button[value="Submit"] {
+  color: white;
+}
+
+/* Internal links, beginning with "#" */
+a[href^="#"] {
+  background-color: gold;
+}
+
+/* Links with "example" anywhere in the URL */
+a[href*="example"] {
+  background-color: silver;
+}
+
+/* Links with "insensitive" anywhere in the URL, regardless of capitalization */
+a[href*="insensitive" i] {
+  color: blue;
+}
+
+/* Links with "cAsE" anywhere in the URL, with matching capitalization */
+a[href*="cAsE"] {
+  color: pink;
+}
+
+/* Links that end in ".org" */
+a[href$=".org"] {
+  color: red;
+}
+
+/* Links that start with "https" and end in ".org" */
+a[href^="https"][href$=".org"] {
+  color: green;
+}
+
+/* Specificity */
+/* #red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+p {
+  color: yellow;
+} */
+
+button[type="submit"] {
+  color: pink;
+}
+
+/* Variables */
+
+/* :root {
+  --blue: #6495ed;
+}
+body {
+  background-color: var(--blue);
+}
+h3 {
+  --white: #faf0e6;
+  color: var(--white);
+} */
+
+/* Icons */
+/* i {
+  font-size: 5rem;
+}
+.material-symbols-outlined {
+  font-size: 5rem;
+} */

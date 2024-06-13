@@ -1,0 +1,17 @@
+<html>
+  <head>
+    XSS demo
+  </head>
+  <!-- - If an attacker enters the following script, the server will respond with some HTML, parse the
+response, and execute the script.
+<script> alert(‘Hello from malicious attacker’)</script>
+Your job is to implement something to protect against this attack. Please explain your solution
+and attach screenshots, verifying that it has been prevented. -->
+  <body>
+    <form action="/post">
+      <label for="fname">Leave a comment:</label>
+      <input type="text" name="input" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

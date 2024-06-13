@@ -1,0 +1,16 @@
+1. How to build a server using Node.js : Without Express.js, you'll have to build your server using Node's core modules, such as the HTTP, FS, and querystring modules. You'll also have to write your code in a very eevent-based way, as the HTTP and FS modules build upon Node's EventEmitter object.
+2. What is Express.js : A Framework for Node.js that abstracts away most of Node's core modules, allowing you to create a server without needing to directly interact with them.
+3. What is the difference between response.send() and response.write() in express : response.send() sends all data at once, while response.write() writes to the response bit by bit in a stream. Response.write() needs to finish with a Response.end() statement.
+4. What is the difference between HTTP get method and HTTP post method : GET lacks a body. POST can request data since it hides sensitive info in its body- it can also store more data in its body.
+5. What is Content-Type? What are different kinds of Content-Type : Content-type specifies the media type of the reosurce being sent/recieved. Some examples:
+    - text/html : The content is html
+    - text/plain : Plaintext Content
+    - application/json : the content is JSON
+    - Node.js and other server-side frameworks can sense tie content-type.
+6. How to enable automatic re-running when files are modified : Use the nodemon library or use the --watch flag in a script.
+7. How to pass the parameters in url : You can use both route parameters and/or query parameters. Route parameters are parameters baked into the path, while query parameters are parameters that are query tags. They can be accessed in Express with req.params or req.query respectively.
+8. What is the difference between static and dynamic web pages : Static pages dont involve server-side processing, while Dynamic pages do. Static Pages are prebuilt and doesn't change dynamically, While Dynamic web pages are generated at runtime and can change based on user input or DB updates.
+9. Have you use template engines : Template engines are a way to server-side-render static pages. Pug is a type of template engine- to use it, you must configure your pugfiles to point to where your static files are located.
+10. What is SSR : Server Side Rendering : A method of rendering where a fully fleshed out HTML, CSS and JS files are sent to the client without any need for extraneous HTTP calls. Fast but limited in capability. Traditionally done using a Templating Engine like Pug, but now can be done with tech like Next.js
+11. What is CSR : Client Side Rendering : Default way webpages are rendered: on the serverside. Barebones HTML is sent to the client and a waterfall of HTTP requests fill in the HTML code.
+12. How would you structure your node web application : You could use a Node.js application skeleton generator tool. It quickly sets up the structure of a Node.js application. One example is express-generator. 
