@@ -1,9 +1,9 @@
-import { useMemo, useState, useCallback } from 'react';
+import { useMemo, useState, useCallback } from "react";
 
 const Memo = () => {
   const [num, setNum] = useState<number>(0);
-  // // this randomChange state is just for triggering re-renders
-  const [randomChange, setRandomChange] = useState<number>(Math.random());
+
+  const [randomChange, setRandomChange] = useState<number>(Math.random()); // Trigger Rerenders
 
   const fibonacci = (n: number): number => {
     if (n < 2) {
@@ -13,21 +13,23 @@ const Memo = () => {
     }
   };
 
-  // //  without useMemo(), component takes a long time to re-render if the calculation is expensive
-  const value = fibonacci(num);
+  // const value = fibonacci(num); // Recalculates on rerender, even if num is the same
 
-  // const fibonacciCallback = useCallback<(n: number) => number>(fibonacci, []);
+  // useCallback memoizes the function reference, ensuring it remains the same throughout rerenders
+  // const fibonacciCallback = useCallback<(n: number) => number>(fibonacci, []); // Same as above
+  // const value = fibonacciCallback(num);
 
-  // // if you enable eslint, it will warn you that you need to put fibonacci as a dependency in the dependency array, but if we put fibonacci inside, useMemo() won't have any benefits anymore because this function will be recreated with a different reference for every re-render, and useMemo() will think the dependency changed, to solve this, see useCallback()
-  // // It only memoizes the previously calculated value.
-  // const value = useMemo<number>(() => fibonacci(num), [num]);
+  // This memoizes the result of the computation. On rerender, it doesnt recompute if num is the same!
+  // (only memoizes the previously calculated value)
+  const value = useMemo<number>(() => fibonacci(num), [num]); // If num is the same, doesn't recalculate on rerender!
+  // Note: Don't add fibonacci as a dependency in the dependency array! Fibonacci() will be recreated on every render, defeating the purpose of useMemo- unless you use useCallback()
 
   return (
     <>
       <h1>useMemo</h1>
       <p>Fibonacci Result: {value}</p>
       <input
-        type='number'
+        type="number"
         value={num}
         onChange={(e) => setNum(Number(e.target.value))}
       />

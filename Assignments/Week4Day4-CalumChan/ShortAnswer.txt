@@ -1,0 +1,6 @@
+1. What is SPA? : 
+    Single Page Apps are apps that have only one HTML page. React and Vue are used for building SPA's. A SPA loads a single HTML page and its dynamically changed by the application.
+2. What is CORS? : 
+    Cross Origin Resource Sharing : It is one of two methods (the other being Proxies) to get around the Single Origin policy. By using the COR's library, you can enable other origins to to access your server's resources based off their headers.
+3. What is HOC? : 
+    Higher Order Component : A component that takes in a component "input" as a parameter and returns a new component that returns the "input" component with added functionalities/logic. 

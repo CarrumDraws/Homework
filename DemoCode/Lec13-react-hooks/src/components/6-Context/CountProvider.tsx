@@ -16,7 +16,7 @@ const CountProvider = ({ children }: Props) => {
     setCount((prevCount) => prevCount - 1);
   };
 
-  // // enclose all data that we want to share in a single object
+  // All data/functions here
   const value: CountContextType = {
     count,
     increment,
@@ -24,7 +24,7 @@ const CountProvider = ({ children }: Props) => {
   };
 
   return (
-    // // we use context.Provider and pass in the values we want to share to it's children components
+    // Wrap Provider around children
     <countContext.Provider value={value}>{children}</countContext.Provider>
   );
 };

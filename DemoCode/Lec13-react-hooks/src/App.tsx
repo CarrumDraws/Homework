@@ -29,11 +29,11 @@ function App() {
 
       {/* <Ref /> */}
 
-      <Parent />
+      {/* <Parent /> */}
 
-      <CountProvider>
+      {/* <CountProvider>
         <Level1 />
-      </CountProvider>
+      </CountProvider> */}
 
       {/* <ReactMemo /> */}
 
@@ -41,9 +41,9 @@ function App() {
 
       {/* <Callback /> */}
 
-      {/* <Suspense fallback={<Fallback />}>
+      <Suspense fallback={<Fallback />}>
         <Lazy />
-      </Suspense> */}
+      </Suspense>
     </>
   );
 }

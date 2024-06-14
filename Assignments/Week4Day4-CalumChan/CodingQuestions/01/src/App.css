@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  outline: white solid 1px;
+  font-size: 2rem;
+
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}

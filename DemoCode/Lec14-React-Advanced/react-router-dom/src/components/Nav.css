@@ -1,0 +1,17 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.active {
+  color: pink;
+  text-decoration: underline;
+}

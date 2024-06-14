@@ -1,19 +1,21 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
-import MemoItem from './Item';
+import MemoItem from "./Item";
 
 const arr = [1, 2, 3];
 
 const Callback = () => {
   const [count, setCount] = useState<number>(0);
 
-  const increment = (): void => {
-    setCount((prevCount) => prevCount + 1);
-  };
+  // const increment = (): void => {
+  //   setCount((prevCount) => prevCount + 1);
+  // };
+  // MemoItem rerenders everytime since increment's ref changes
 
-  // const increment = useCallback<() => void>((): void => {
-  //   setCount((prev) => prev + 1);
-  // }, [setCount]);
+  const increment = useCallback<() => void>((): void => {
+    setCount((prev) => prev + 1);
+  }, [setCount]);
+  // MemoItem doesn't rerender because increment's ref is the same!
 
   return (
     <>
@@ -22,11 +24,7 @@ const Callback = () => {
       <button onClick={increment}>Increment</button>
 
       {arr.map((item) => (
-        <MemoItem
-          key={item}
-          value={item}
-          increment={increment}
-        />
+        <MemoItem key={item} value={item} increment={increment} />
       ))}
     </>
   );
