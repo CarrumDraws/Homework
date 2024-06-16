@@ -1,0 +1,14 @@
+1. What is prop drilling?
+    In an app with deeply nested children, prop drilling is the task of having to manually pass down props up and down the layers. It can be avoided by using Context or Redux.
+2. Explain what the Redux store, actions, reducers are and what they do. What is the workflow?
+    The redux store is the single source of truth in a redux app. it stores all of our state. Actions are dispatched by a component to the store, whcih then fennels the actions into theri respective reducers, which then update the state in the store based off the action. Subscribed components are then updated based off their selected state.
+3. What is a pure function? What are the advantages to writing pure functions?
+    A pure function is a function that only relies on its inputs to operate, produces the same output given the same input, and produce no side effects. Pure fucntions are used in our reducers due to theri dependability, inability to cause side effects, and predictibility.
+4. When would you use the Context API? How about Redux?
+    In general, the Context API is best used for smaller projects while Redux is used for enterprise level projects. Redux is more reliable when it comes to complex state management with complex state.
+5. What is HOC?
+    Higher Order Component: A component that takes in another component as an input, then returns a new component that returns our input compoennt with added functionalities, such as additional props, additional functionality, or a private state.
+6. Explain mapStateToProps and mapDispatchToProps.
+    They are both functions that are used with React-redux's connect() HOC, which is an HOC used to Access and Dispatch actions to the store in react class components. Mapstatetoprops is akin to useSelector (selects data from store), while mapDispatchToprops is akin to useDispatch, whcih dispatches actions.
+7. How do you asynchronously dispatch an action?
+    Use thunks! With thunks, instead of dispatching an action, you can dispatch a function or a Promise. Depending on how you are integrating redux into your app though, you may need extra dependancies.

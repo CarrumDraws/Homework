@@ -17,7 +17,8 @@ type Action = {
   payload?: string;
 };
 
-// reducer function to be passed into the useReducer hook, must be pure function
+// Reducer function is a pure function- they don't cause side effects!
+// State is immutable- don't update the state, returna new one.
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "INCREMENT":
@@ -27,16 +28,14 @@ const reducer = (state: State, action: Action): State => {
     case "SET_NAME":
       return { ...state, person: { ...state.person, name: action.payload! } };
     case "RESET":
-      // utilize the init() function we defined to re-initilize our state
-      return init(initialState);
+      return init(initialState); // Reinitialize the state
     default:
       throw new Error();
-    // or
-    // return state;
+    // return state; // or this!
   }
 };
 
-// initial state for the useReducer hook
+// Initial State- not finished yet! Use init() function.
 const initialState: InitialState = {
   count: 0,
   person: {
@@ -44,13 +43,15 @@ const initialState: InitialState = {
   },
 };
 
-// optional init() function to be passed into the useReducer hook, useful if you initial state needs heavy computation
+// Optional function that initializes the state
+// Used when initial state requires extra processing before it is set
 const init = (initialState: InitialState): State => {
-  return { ...initialState, color: "red" };
+  return { ...initialState, color: "red" }; // Add extra "color" property
 };
 
 const Reducer = () => {
-  // // state is the entire state, dispatch is a function that is used to send actions to the reducer function
+  // state: current state of the component
+  // dispatch: function that sends actions to the reducer
   const [state, dispatch] = useReducer(reducer, initialState, init);
 
   return (

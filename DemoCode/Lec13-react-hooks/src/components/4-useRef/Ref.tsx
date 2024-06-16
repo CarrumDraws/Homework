@@ -14,8 +14,7 @@ const Ref = () => {
   useEffect((): void => {
     prevRef.current = value;
   }, [value]);
-  // EXPLANATION:
-  // When the 'value' state changes, it triggers a rerender + useEffect.
+  // EXPLINATION: When the 'value' state changes, it triggers a rerender + useEffect.
   // UseEffect then updates prevRef's value. However, ref updates don't trigger a rerender, so this update isn't reflected in the DOM.
   // The update to prevRef will show upon the next rerender, wether it be from setValue or something else.
 
