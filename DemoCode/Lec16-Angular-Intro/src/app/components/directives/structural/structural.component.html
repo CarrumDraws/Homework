@@ -1,0 +1,27 @@
+<!-- Structural Directives: Add, Remove, Manipulate DOM Elements -->
+
+<!-- ngFor -->
+<h1>ngFor</h1>
+<ul>
+  <!-- Apply ngFor on the element you want to duplicate -->
+  <!-- Add "trackBy" as a key -->
+  <li *ngFor="let number of numbers; index as i; trackBy: trackByFn">
+    Number: {{ number }} Index: {{ i }}
+  </li>
+</ul>
+<hr />
+
+<!-- ngIf -->
+<h1>ngIf</h1>
+<h3 *ngIf="showTitle">Title</h3>
+<hr />
+
+<!-- ngSwitch -->
+<h1>ngSwitch</h1>
+<div [ngSwitch]="switchCase">
+  <h3 *ngSwitchCase="'a'">A</h3>
+  <h3 *ngSwitchCase="'b'">B</h3>
+  <h3 *ngSwitchCase="'c'">C</h3>
+  <h3 *ngSwitchCase="'d'">D</h3>
+  <h3 *ngSwitchDefault>Default Case</h3>
+</div>

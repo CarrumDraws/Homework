@@ -1,0 +1,11 @@
+<!-- Attribure Directives: Modify behavior or appearance of an element, component, or another Directive -->
+
+<!-- ngStyle: Takes in variables for dynamic updates -->
+<h1 [ngStyle]="{ backgroundColor: color, color: 'white' }">ngStyle</h1>
+<!-- style: Static -->
+<h1 [style.backgroundColor]="'red'">Regular Style</h1>
+
+<!-- ngClass: Takes in variables for dynamic updates -->
+<h1 [ngClass]="color === 'blue' ? 'blue' : 'white'">ngClass</h1>
+<!-- class: Static -->
+<h1 [class]="color">Regular Class</h1>

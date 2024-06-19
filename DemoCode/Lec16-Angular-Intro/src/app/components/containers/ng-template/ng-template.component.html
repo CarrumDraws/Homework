@@ -1,0 +1,18 @@
+<!-- ng-template only shows when used with structural directives! -->
+<ng-template>Doesn't show</ng-template>
+
+<button (click)="show = !show">Toggle Show</button>
+
+<!-- Display either this block or the elseTemplate! -->
+<div *ngIf="show; else elseTemplate">
+  <h2>List of Numbers</h2>
+  <ul>
+    <li *ngFor="let number of numbers">{{ number }}</li>
+  </ul>
+</div>
+
+<!-- ng-template: A placeholder for conditionally rendered content -->
+<!-- 'elseTemplate' is the reference variable! -->
+<ng-template #elseTemplate>
+  <h2>No Numbers to Show</h2>
+</ng-template>

@@ -1,0 +1,22 @@
+<!-- used for grouping elements -->
+<ng-container>
+  <h1>ng-container</h1>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</ng-container>
+
+<!-- cannot bind more than one structural directives into one element -->
+<!-- <ul>
+  <li *ngFor="let number of numbers" *ngIf="number % 2 === 0">
+    {{ number }}
+  </li>
+</ul> -->
+
+<!-- To solve this we can use ng-container -->
+<ul>
+  <ng-container *ngFor="let number of numbers">
+    <li *ngIf="number % 2 === 0">{{ number }}</li>
+  </ng-container>
+</ul>
